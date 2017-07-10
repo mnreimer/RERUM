@@ -28,7 +28,6 @@ function [m,fspace] = parameters()
     s = gridmake(scoord);               % Collocation nodes in grid form (matrix)
 
 % Expected Catch %
-    rng(1), q = rand(sp,N);             % Catchability coefficient, by species, vessel
     mubar = ones(fish,sp);              % Mean of e in each fishery (manually adjust based on # of fisheries & species)
     var = 3;                            % variance of e 
     epspar = [0 1];                     % Mean and std of random shock (epsilon)--assumed to be the same for all species
@@ -39,7 +38,7 @@ function [m,fspace] = parameters()
 %--------------------------%
     m.actions = (1:1:fish+1)';          % Action space
     m.state = {scoord s qmax};          % State space          
-    m.space = {fish sp q};              % Spatial/species parameters 
+    m.space = {fish sp};                % Spatial/species parameters 
     m.params = {p c signal};            % Reward parameters
     m.horizon = {T};                    % Time/Error horizon parameters
     m.vessels = {N};

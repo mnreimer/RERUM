@@ -1,0 +1,171 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>EXPECTED CATCH DATA</title><meta name="generator" content="MATLAB 9.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2017-07-07"><meta name="DC.source" content="ExpCatch.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>EXPECTED CATCH DATA</h1><!--introduction--><div><ul><li>Filename: ExpCatch.m</li><li>Authors: Matt Reimer</li><li>Created: 07/07/17</li><li>Purpose: Generate expected catch data that is used in the fishery choice model.</li></ul></div><p><b>Description</b>: This file generates simulated expected catch data to be used in place of the empirical estimates of expected catch that will be used in the final model.</p><p><b>Model</b>: Let <img src="ExpCatch_eq14459652603702746075.png" alt="$e_{j,s,t}$" style="width:25px;height:11px;"> denote a normally-distributed random variable associated with fishery <img src="ExpCatch_eq07225361342133155126.png" alt="$j$" style="width:7px;height:13px;">, species <img src="ExpCatch_eq17157792396909321071.png" alt="$s$" style="width:6px;height:7px;">, and time <img src="ExpCatch_eq12656067504604335951.png" alt="$t$" style="width:5px;height:10px;">. Let <img src="ExpCatch_eq05258266636860233157.png" alt="$\mu_{j,s,t}$" style="width:27px;height:11px;"> and <img src="ExpCatch_eq03986963622219052081.png" alt="$\sigma_s$" style="width:13px;height:9px;"> denote the mean and variance, respectively. We model catch as:</p><p><img src="ExpCatch_eq01914518522385895462.png" alt="$$C_{j,s,t} = exp\{ e_{j,s,t} \} $$" style="width:111px;height:15px;"></p><p>so that catch has a lognormal distribution with mean:</p><p><img src="ExpCatch_eq09438551997250112313.png" alt="$$EC_{j,s,t} = exp\{ \mu_{j,s,t} + \sigma_s/2 \} $$" style="width:171px;height:15px;"></p><p>For simplicity, I assume that the variance <img src="ExpCatch_eq03986963622219052081.png" alt="$\sigma_s$" style="width:13px;height:9px;"> is constant over time and across fisheries, while the mean <img src="ExpCatch_eq05258266636860233157.png" alt="$\mu_{j,s,t}$" style="width:27px;height:11px;"> for each species and fishery is assumed to evolve exogenously and independently according to a continuous-valued Markov process:</p><p><img src="ExpCatch_eq06385626033532979565.png" alt="$$\mu_{j,s,t+1} = \bar{\mu}_{j,s} + \gamma(\mu_{j,s,t} -\bar{\mu}_{j,s})&#xA;+ \varepsilon_{j,s,t}$$" style="width:231px;height:15px;"></p><p>where <img src="ExpCatch_eq08282514726738294248.png" alt="$\bar{\mu}_{j,s}$" style="width:20px;height:13px;"> is a fishery and species time-invariant mean, <img src="ExpCatch_eq17096441642737911057.png" alt="$\gamma$" style="width:8px;height:10px;"> is a parameter that dictates how fast the time series will revert to its overall mean, and <img src="ExpCatch_eq04934585835479885722.png" alt="$\varepsilon$" style="width:6px;height:7px;"> is a normally-distributed random variable.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Preliminaries</a></li><li><a href="#2">Parameters</a></li><li><a href="#3">Generate random shocks <img src="ExpCatch_eq05240840099962348893.png" alt="$(\varepsilon_{j,s,t})$" style="width:35px;height:15px;"></a></li><li><a href="#4">Generate means <img src="ExpCatch_eq13853774125653296632.png" alt="$(\mu_{j,s,t})$" style="width:37px;height:15px;"></a></li><li><a href="#5">Generate expected catch <img src="ExpCatch_eq10011584095281708820.png" alt="$(EC_{j,s,t})$" style="width:50px;height:15px;"></a></li><li><a href="#6">Generate catchability coeficients, by vessel and species</a></li><li><a href="#7">Save data</a></li></ul></div><h2 id="1">Preliminaries</h2><pre class="codeinput">    clc, clear
+    close <span class="string">all</span>
+</pre><h2 id="2">Parameters</h2><pre class="codeinput">    m = parameters;             <span class="comment">% Model parameters (see function file: parameters)</span>
+    fish = m.space{1};          <span class="comment">% Number of fisheries, excluding fishery 1 (port)</span>
+    sp = m.space{2};            <span class="comment">% Number of species</span>
+    T = m.horizon{1};           <span class="comment">% time horizon</span>
+    mubar = m.expcatch{1};      <span class="comment">% Mean of e in each fishery</span>
+    var = m.expcatch{2};        <span class="comment">% Variance of e</span>
+    epspar = m.expcatch{3};     <span class="comment">% Mean and std of random shock (epsilon)</span>
+    mu0 = m.expcatch{4};        <span class="comment">% Initial values for mu</span>
+    gamma = m.expcatch{5};      <span class="comment">% Mean reversion parameter</span>
+    N = m.vessels{1};           <span class="comment">% Number of vessels</span>
+</pre><h2 id="3">Generate random shocks <img src="ExpCatch_eq05240840099962348893.png" alt="$(\varepsilon_{j,s,t})$" style="width:35px;height:15px;"></h2><pre class="codeinput">    rng(3,<span class="string">'twister'</span>);                   <span class="comment">% set seed to reproduce results</span>
+    seed = rng;
+    rng(seed);
+    eps = epspar(1) + epspar(2)*randn(fish,sp,T);   <span class="comment">% vector of random shocks</span>
+</pre><h2 id="4">Generate means <img src="ExpCatch_eq13853774125653296632.png" alt="$(\mu_{j,s,t})$" style="width:37px;height:15px;"></h2><pre class="codeinput">    mu = zeros(fish,sp,T+1);    <span class="comment">% Preallocate mu matrix (for speed)</span>
+    mu(:,:,1)=mu0;              <span class="comment">% initial value of mu</span>
+    <span class="keyword">for</span> t=1:T
+        mu(:,:,t+1) = mubar + gamma*(mu(:,:,t)-mubar) + eps(:,:,t); <span class="comment">% mu follows a Markov process</span>
+    <span class="keyword">end</span>
+    mu(:,:,1)=[];               <span class="comment">% Drop "burn-in" initial values</span>
+</pre><h2 id="5">Generate expected catch <img src="ExpCatch_eq10011584095281708820.png" alt="$(EC_{j,s,t})$" style="width:50px;height:15px;"></h2><pre class="codeinput">    EC = exp(mu + var/2);
+    EC = [zeros(1,sp,T) ; EC];  <span class="comment">% Zero catch at fishery=1 (port)</span>
+</pre><h2 id="6">Generate catchability coeficients, by vessel and species</h2><pre class="codeinput">    rng(1), q = rand(sp,N);             <span class="comment">% Catchability coefficient, by species, vessel</span>
+</pre><h2 id="7">Save data</h2><pre class="codeinput">    save(<span class="string">'data\ExpCatch.mat'</span>,<span class="string">'EC'</span>,<span class="string">'q'</span>);
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% EXPECTED CATCH DATA
+% * Filename: ExpCatch.m
+% * Authors: Matt Reimer
+% * Created: 07/07/17
+% * Purpose: Generate expected catch data that is used in the fishery choice 
+% model. 
+% 
+% *Description*: This file generates simulated expected catch data to be 
+% used in place of the empirical estimates of expected catch that will be used 
+% in the final model.
+% 
+% *Model*: Let $e_{j,s,t}$ denote a normally-distributed random variable 
+% associated with fishery $j$, species $s$, and time $t$. Let $\mu_{j,s,t}$ and 
+% $\sigma_s$ denote the mean and variance, respectively. We model catch as:
+% 
+% $$C_{j,s,t} = exp\{ e_{j,s,t} \} $$
+% 
+% so that catch has a lognormal distribution with mean:
+% 
+% $$EC_{j,s,t} = exp\{ \mu_{j,s,t} + \sigma_s/2 \} $$
+% 
+% For simplicity, I assume that the variance $\sigma_s$ is constant over 
+% time and across fisheries, while the mean $\mu_{j,s,t}$ for each species and 
+% fishery is assumed to evolve exogenously and independently according to a continuous-valued 
+% Markov process:
+% 
+% $$\mu_{j,s,t+1} = \bar{\mu}_{j,s} + \gamma(\mu_{j,s,t} -\bar{\mu}_{j,s}) 
+% + \varepsilon_{j,s,t}$$
+% 
+% where $\bar{\mu}_{j,s}$ is a fishery and species time-invariant mean, $\gamma$ 
+% is a parameter that dictates how fast the time series will revert to its overall 
+% mean, and $\varepsilon$ is a normally-distributed random variable.
+
+%% Preliminaries
+    clc, clear
+    close all
+    
+%% Parameters
+    m = parameters;             % Model parameters (see function file: parameters)
+    fish = m.space{1};          % Number of fisheries, excluding fishery 1 (port)
+    sp = m.space{2};            % Number of species
+    T = m.horizon{1};           % time horizon  
+    mubar = m.expcatch{1};      % Mean of e in each fishery 
+    var = m.expcatch{2};        % Variance of e 
+    epspar = m.expcatch{3};     % Mean and std of random shock (epsilon)
+    mu0 = m.expcatch{4};        % Initial values for mu
+    gamma = m.expcatch{5};      % Mean reversion parameter
+    N = m.vessels{1};           % Number of vessels
+    
+%% Generate random shocks $(\varepsilon_{j,s,t})$
+    rng(3,'twister');                   % set seed to reproduce results
+    seed = rng;   
+    rng(seed);
+    eps = epspar(1) + epspar(2)*randn(fish,sp,T);   % vector of random shocks
+    
+%% Generate means $(\mu_{j,s,t})$
+    mu = zeros(fish,sp,T+1);    % Preallocate mu matrix (for speed)
+    mu(:,:,1)=mu0;              % initial value of mu            
+    for t=1:T
+        mu(:,:,t+1) = mubar + gamma*(mu(:,:,t)-mubar) + eps(:,:,t); % mu follows a Markov process
+    end
+    mu(:,:,1)=[];               % Drop "burn-in" initial values
+    
+%% Generate expected catch $(EC_{j,s,t})$
+    EC = exp(mu + var/2);
+    EC = [zeros(1,sp,T) ; EC];  % Zero catch at fishery=1 (port)
+
+%% Generate catchability coeficients, by vessel and species
+    rng(1), q = rand(sp,N);             % Catchability coefficient, by species, vessel
+
+%% Save data
+    save('data\ExpCatch.mat','EC','q');
+    
+##### SOURCE END #####
+--></body></html>
