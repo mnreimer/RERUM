@@ -12,6 +12,5 @@ equil.m         | Returns the difference between quota demand and supply. Used f
 qlease.m        | Returns the expected end-of-season quota prices, given information state variables.
 
 ## Credit:
-=============
 ### CompEcon Toolbox
 Some of the functions for the collocation methods contained in qlease.m were originally developed by Miranda and Fackler, Applied Computational Economics and Finance, MIT Press: Cambridge, MA, 2002, p 510.
