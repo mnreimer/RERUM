@@ -42,11 +42,11 @@ function [out1] = func(flag,x,t,i,k,w,m)
 % * |EC| = an array of expected catch used in reward function and constraints;
 %
 %% Output Arguments:
-% For the reward (|flag|='f'), the function provides: |out1| = the value of 
-% the current period's reward. 
+% For the reward (|flag|='f'), the function provides:
+% *|out1| = the value of the current period's reward. 
 % 
-% For the transition (|flag|='g'), the function provides: |out1| = the 
-% value of the current period's catch.
+% For the transition (|flag|='g'), the function provides:
+% * |out1| = the value of the current period's catch.
 % 
 %% Notes:
 % Eventually, the reward function will be revised to include 

@@ -32,8 +32,6 @@
     toc;
     % Quota price
     I0 = I0(2,:);
-    n = prod(m.fspace.n);               % Total # of nodes to evaluate
-    eta0 = reshape(eta0,n,m.model.S); 
     w = qlease(eta0,I0,m);
     
 %%  Solve for collocation nodes

@@ -1,4 +1,4 @@
-%% Excess Demand Function
+function [out1,out2] = xdemand(eta,I0,m)
 % * Filename: xdemand.m
 % * Authors: Matt Reimer
 % * Created: 07/08/17
@@ -16,27 +16,25 @@
 % $q_{i,s}$ and $\omega_{i,s}$: $i$'s annual catch and allocation, 
 % respectively. Annual catch is calculated as
 %
-% $$ q_{i,s} = \sum_{t \in T} C_{i,t}(a_{i,t}^*(\mathbf{w})) $$
+% $$ q_{i,s} = \sum_{t \in T} \C_{i,t}(a_{i,t}^*) $$
 %
-% where $C_{i,t}(a)$ is $i$'s catch in period $t$ for fishery $a$, and
-% $a_{i,t}^*(\mathbf{w})$ is $i$'s optimal fishery choice given quota price
-% $\mathbf{w}$.
+% where $\C_{i,t}(a)$ is $i$'s catch in period $t$.
 %
-function [out1,out2] = xdemand(eta,I0,m)
-%% Input arguments:
-% * |eta| = a $NS \times 1$ vector of collocation coefficients;
-% * |I0| = a $NS \times d$ matrix of collocation nodes;
-% * |m| = a structural array containing parameter values
+%% Parameters/Exogenous Variables
+% w = a vector of quota prices
+% i = the vessel for which the sdp is for
 %
-%% Output arguments:
-% * |out1| = a $S \times 1$ vector of average excess demand values.
-% * |out2| = a vector of average end-of-season quota prices
-%
-%
-%% Notes:
-% The vector $\eta$ will be provided by a Matlab solver (e.g., |fsolve|).
-%
-%% Preliminaries   
+% This function imports exogenous information/data from other functions:
+% 
+% * The function |parameters.m| contains all parameter values and returns them 
+% in a structure that is easy to pass into susbequent functions. Use this function 
+% to change parameter values or approximation spaces.
+% * The function |Expcatch.m| computes the expected values for species-specific 
+% catch in each time period and time period.
+% * The function |err.m| returns the shocks to catch, which are used to compute 
+% expectations of the value function.
+
+   
     c = zeros(m.model.N,m.model.S);     % Catch
     t0 = I0(end);       % Starting time period
     out1 = zeros(1,m.model.S);          % Excess demand
