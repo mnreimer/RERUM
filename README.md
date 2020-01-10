@@ -20,6 +20,6 @@ policy_simulations.m                       | Generates policy simulations for by
 ***
 
 ### Matlab Toolboxes
-- Opimization Toolbox
+- Optimization Toolbox
 - Parallel Computing Toolbox  (Monte Carlo draws are computed in parallel)
 - Statistics and Machine Learning Toolbox (only for the evrnd() function)
