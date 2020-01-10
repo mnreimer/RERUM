@@ -1,8 +1,8 @@
-# fishery_choice-model
-### Modeling target fishery choice in a multispecies catch share fishery
+# The Rational Expectations Random Utility Maximization (RERUM) Model
+### Modeling location choice in a multispecies catch-share fishery
 ***
 ### Purpose
-To predict the behavior of a multispecies commercial fleet in response to regulatory changes, such as reducing harvest limits on bycatch species.  This project develops an empirical modeling approach that can be used to evaluate alternative policies, examine the tradeoffs between bycatch limit reductions and foregone industry profits, and identify species and populations that may be at increased risk from industry behavior changes. The methodological approach is capable of being applied to generally to multispecies fisheries that are managed by catch shares. 
+This project develops a model of spatiotemporal fishing behavior that incorporates the dynamic and general equilibrium elements of catch-share fisheries. We construct an estimation strategy that is able to recover structural behavioral parameters through a nested fixed-point maximum likelihood procedure. The modeling approach is illustrated through a Monte Carlo analysis. We demonstrate its importance for predicting out-of-sample counterfactual policies.
 ***
 
 ### Note
