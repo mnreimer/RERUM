@@ -1,5 +1,5 @@
-# Fishery Choice Model Functions
-### Contains functions used in simulation model.
+# RERUM Model Functions
+### Contains functions used in generating data, estimating RERUM parameters, and producing figures.
 
 ***
 
